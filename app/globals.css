@@ -24,3 +24,67 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom styles for range input */
+input[type="range"] {
+  @apply h-2 bg-rose-400 hover:bg-rose-500 transition-all rounded-md opacity-90 hover:opacity-100 outline-none;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply bg-slate-400 hover:bg-slate-500 border border-solid border-rose-700 size-5 rounded-full cursor-pointer transition-all;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  @apply bg-slate-400 hover:bg-slate-500 border border-solid border-rose-700 size-5 rounded-full cursor-pointer transition-all;
+}
+
+select {
+  outline: 0px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('/icons/arrow-down-black.svg') no-repeat left 10px center;
+  @apply bg-[#F2F4F7] text-gray-900
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  @apply w-0.5 sm:w-1 md:w-2
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-800
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-600 rounded-sm
+}
+
+::-moz-scrollbar {
+  @apply w-0.5 sm:w-1 md:w-2
+}
+
+::-moz-scrollbar-track {
+  @apply bg-slate-800
+}
+
+::-moz-scrollbar-thumb {
+  @apply bg-slate-600 rounded-sm
+}
